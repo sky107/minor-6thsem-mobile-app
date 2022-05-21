@@ -51,12 +51,13 @@ export default function HomeScreen({ navigation }) {
 
   useFocusEffect(
     React.useCallback(() => {
-      setDeviceCounts(null);
+      // console.log("NAV", navigation);
+      // setDeviceCounts(null);
       setLoading(true)
       async function fetchData() {
         const records = await get('activity')
         const counts = await get('devices/count');
-        const devices = await get('/devices');
+        const devices = await get('devices');
         const rsp = await Promise.all([get('activity'), get('devices'), get('devices/count')]);
         if (response.ok) {
           setActivites(rsp[0].data);
@@ -145,21 +146,7 @@ export default function HomeScreen({ navigation }) {
             ]}
           />
 
-          <ScrollView style={styles.listContainer}>
-            {/* <Divider orientation='center'>Filter</Divider> */}
-
-            {/* <CalendarModal /> */}
-
-
-
-
-            <View style={{ flexDirection: 'row' }}>
-
-
-
-
-            </View>
-
+          <ScrollView style={styles.listContainer} showsVerticalScrollIndicator>
             {activites.map((ac, idx) =>
               <DeviceCard key={`ac-card-${idx}`} {...ac} bgColor="gray" />
             )}

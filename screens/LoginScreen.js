@@ -70,10 +70,10 @@ export default function LoginScreen() {
     <View style={styles.creditsContainer}>
       <View>
         <Text style={styles.credits}>
-          Siddharth Kumar Yadav (59)
+          Siddharth Kumar Yadav
         </Text>
         <Text style={styles.credits}>
-          Dayarma Jamra (16)
+          Dayarma Jamra
         </Text>
         <Text style={styles.credits}>
           Kartik Joshi

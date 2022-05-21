@@ -13,9 +13,10 @@ export default function DeviceCard(props) {
           <Text>{props.deviceId}</Text>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.bold}>|
+          <Text style={styles.bold}>
+
           </Text>
-          <Text> {moment(props.createdAt).format()}</Text>
+          <Text> {moment(props.createdAt).format("DD/MM/YYYY |  hh:mm:ss A")}</Text>
         </View>
       </View>
 

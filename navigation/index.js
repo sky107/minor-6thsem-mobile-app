@@ -38,7 +38,7 @@ const LoggedInNavigator = () => {
       headerTitleStyle: {
         color: 'dodgerblue'
       },
-      headerLeft: false
+      // headerLeft: false
 
     }}
   >

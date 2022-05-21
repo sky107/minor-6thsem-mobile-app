@@ -18,12 +18,10 @@ export default function App() {
     if (currTime > logoutTime && userData) {
       setUserData(null);
       RNRestart.Restart();
-    }
-
+    } else if (!userData)
+      setLoading(false)
 
   }, [])
-
-
 
   return (<>
     {loading && <LoadingScreen />}

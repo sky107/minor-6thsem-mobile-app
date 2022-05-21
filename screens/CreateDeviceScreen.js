@@ -23,7 +23,9 @@ export default function CreateDeviceScreen() {
     })
     if (response.ok) {
       setLoading(false);
-      navigation.replace("Motioncloud")
+      navigation.replace("Motioncloud", {
+        refetch: false
+      })
     }
 
 
