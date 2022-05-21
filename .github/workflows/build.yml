@@ -27,6 +27,10 @@ jobs:
         with:
           name: app-release.apk
           path: android/app/build/outputs/apk/release/
+  send-the-mail:
+    needs: build-android
+    runs-on: ubuntu-latest
+    steps:
       - name: Send mail
         uses: dawidd6/action-send-mail@v3
         with:
